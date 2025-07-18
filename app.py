@@ -48,7 +48,8 @@ if uploaded_file:
 
 import openai
 
-openai.api_key = st.secrets["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"]
+openai.api_key = st.secrets["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"]
+
 
 
 st.subheader("🤖 Ask the Resume Advisor")
