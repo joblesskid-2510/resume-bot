@@ -48,9 +48,7 @@ if uploaded_file:
 
 import openai
 
-openai.api_key = st.secrets["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"]
-
-
+openai.api_key = st.secrets["openai_key"]
 
 st.subheader("🤖 Ask the Resume Advisor")
 
