@@ -48,7 +48,7 @@ if uploaded_file:
 
 import openai
 
-openai.api_key = st.secrets["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"]
+openai.api_key = st.secrets["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"]
 
 
 
