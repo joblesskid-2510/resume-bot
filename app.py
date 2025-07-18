@@ -45,3 +45,22 @@ if uploaded_file:
 
     with st.expander("📄 Show Extracted Resume Text"):
         st.text(text)
+
+import openai
+
+openai.api_key = st.secrets.get("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")  # secure way
+
+st.subheader("🤖 Ask the Resume Advisor")
+
+user_query = st.chat_input("Ask about your resume or job fit...")
+
+if user_query and uploaded_file:
+    with st.spinner("Thinking..."):
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "system", "content": f"You are a helpful resume advisor. The resume content is:\n{text}"},
+                {"role": "user", "content": user_query}
+            ]
+        )
+        st.write(response['choices'][0]['message']['content'])
