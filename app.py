@@ -48,7 +48,7 @@ if uploaded_file:
 
 import openai
 
-openai.api_key = st.secrets.get("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")  # secure way
+openai.api_key = st.secrets.get("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")  # secure way
 
 st.subheader("🤖 Ask the Resume Advisor")
 
